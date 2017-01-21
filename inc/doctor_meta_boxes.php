@@ -10,7 +10,7 @@
 	        wp_nonce_field( 'doc_meta_box_nonce', 'meta_box_nonce' );
 	        $doc_name_txt    = isset( $values['doc_full_name_input'] ) ? esc_attr( $values['doc_full_name_input'][0] ) : '';
 	        $doc_addr_txt    = isset( $values['doc_addr_input'] ) ? esc_attr( $values['doc_addr_input'][0] ) : '';
-	        $doc_city_txt    = isset( $values['doc_addr_input'] ) ? esc_attr( $values['doc_addr_input'][0] ) : '';
+	        $doc_city_txt    = isset( $values['doc_city_input'] ) ? esc_attr( $values['doc_city_input'][0] ) : '';
 	        $doc_state_txt   = isset( $values['doc_state_select'] ) ? esc_attr( $values['doc_state_select'][0] ) : '';
 	        $doc_zip_txt     = isset( $values['doc_zip_input'] ) ? esc_attr( $values['doc_zip_input'][0] ) : '';
 	        $doc_phone_txt   = isset( $values['doc_phone_input'] ) ? esc_attr( $values['doc_phone_input'][0] ) : '';
@@ -163,7 +163,7 @@
 	            update_post_meta( $post_id, 'doc_map_input', wp_kses( $_POST['doc_map_input'], array(
 	                'iframe' => array(
 	                    'src' => array(),
-	                    'frameborder' => array()
+	                    'allowfullscreen' => array()
 	                    )
 	                ) ) );
 	        if( isset( $_POST['doc_email_input'] ) )

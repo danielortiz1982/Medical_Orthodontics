@@ -10,10 +10,29 @@
     </head>
 
     <body <?php body_class(); ?>>
+    	<div class="wrapper">
+            <header class="header">
+                <div class="contentBox">
+                    <div class="row">
+                        <div id="headerLeft" class="col-md-6">
+                            <div class="header-logo"><a href="/noor/MedicalOrthodontics"><img src="<?php echo get_template_directory_uri() . '/images/logo.svg' ?>" /></a></div>
+                        </div>
+                        <!--#headerLeft-->
+
+                        <div id="headerRight" class="col-md-6">
+
+                        </div>
+                        <!--#headerRight-->
+                    </div>
+                </div>
+
+                <div class="nav-box">
+                    <nav>
+                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'header-menu' ) ); ?>
+                    </nav>
+                </div>
+                <!--end of .nav-box-->
+
+            </header>
+            <!--end of .header-->
     	
-    	<header class="site-header">
-    		<h1 class="site-brand"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
-	    	<h2 class="site-description"><?php bloginfo('description'); ?></h2>
-	    	<nav><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?></nav>
-    	</header>
-        <!--end of .site-header-->

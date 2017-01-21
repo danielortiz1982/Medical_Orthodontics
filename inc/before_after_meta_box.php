@@ -17,7 +17,7 @@
 	        </div>
 
 	        <div class="meta-wrapper">
-	            <label for="doc_map_input">Video Demo:</label><br />
+	            <label for="before_after_video_input">Video Demo:</label><br />
 	            <div><?php echo get_post_meta($post->ID, 'before_after_video_input', true); ?></div>
 	        </div>
 
@@ -36,7 +36,7 @@
 	            update_post_meta( $post_id, 'before_after_video_input', wp_kses( $_POST['before_after_video_input'], array(
 	                'iframe' => array(
 	                    'src' => array(),
-	                    'frameborder' => array()
+	                    'allowfullscreen' => array()
 	                    )
 	                ) ) );
 	    }

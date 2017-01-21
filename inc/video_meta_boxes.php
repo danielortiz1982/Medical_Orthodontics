@@ -36,7 +36,8 @@
 	            update_post_meta( $post_id, 'video_meta_input', wp_kses( $_POST['video_meta_input'], array(
 	                'iframe' => array(
 	                    'src' => array(),
-	                    'frameborder' => array()
+	                    'frameborder' => array(),
+	                    'allowfullscreen' => array()
 	                    )
 	                ) ) );
 	    }
