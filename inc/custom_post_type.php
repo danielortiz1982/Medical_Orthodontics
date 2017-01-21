@@ -97,7 +97,7 @@ function Before_and_After(){
 add_action('init', 'Doctors');
 function Doctors(){
 
-    register_post_type( 'Doctors',
+    register_post_type( 'doctors',
             array(
                 'labels' => array(
                     'name' => 'Doctors',
@@ -116,7 +116,7 @@ function Doctors(){
                 'public' => true,
                 'menu_position' => 15,
                 'supports' => array('title', 'editor', 'thumbnail'),
-                'taxonomies' => array( '' ),
+                'taxonomies' => array( 'member' ),
                 'menu_icon' => 'dashicons-businessman',
                 'has_archive' => true
             )
@@ -128,7 +128,7 @@ function Doctors(){
 add_action('init', 'Video');
 function Video(){
 
-    register_post_type( 'Video',
+    register_post_type( 'video',
             array(
                 'labels' => array(
                     'name' => 'Videos',

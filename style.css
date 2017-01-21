@@ -8,3 +8,11 @@ Version: 1.0
 License: GNU 
 Tags: Medical Orthodontics, Medical, Orthodontics, Dental, Dr. Noor, Dr. Daniel Noor, @dortiz82
 */
+
+
+h1, h2, h3, h4, h5, h6{
+	color: #0067ac;
+}
+a{
+	color: #00adef;
+}
