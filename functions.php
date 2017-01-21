@@ -59,6 +59,13 @@ function Medical_Orthodontics_Scripts(){
 }
 // end of Medical_Orthodontics_Scripts
 
+function admin_style() {
+
+wp_enqueue_style( 'Medical-Orthodontics-bootstrap-admin', get_template_directory_uri() . '/css/bootstrap.min.css' );
+  wp_enqueue_style('admin-styles', get_template_directory_uri().'/css/admin.css');
+}
+add_action('admin_enqueue_scripts', 'admin_style');
+
 require('inc/custom_post_type.php');
 require('inc/custom_taxonomies.php');
 require('inc/doctor_meta_boxes.php');

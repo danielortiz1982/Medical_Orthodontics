@@ -14,7 +14,7 @@ body{
 	padding: 0;
 	height: 100%;
 	display: block;
-	position: relative;
+	
 }
 .wrapper{
 	width: 100%;
@@ -23,13 +23,13 @@ body{
 	padding: 0;
 }
 .contentBox{
-	width: 90%;
+	width: 75%;
 	padding: 0;
 	margin: 0 auto;
 	text-align: center;
 	overflow: hidden;
 }
-.contentBox h1, h2, h3, h4, h5, h6{
+.contentBox h1, h2, h3, h4, h5, h6, a{
 	text-align: left;
 	color: #033c73;
 }
@@ -48,32 +48,46 @@ body{
 }
 .nav-box{
 	width: 100%;
-	height: 10em;
 	display: block;
 	position: relative;
 	margin: 0 auto;
 	padding: 0;
 	background-color: #033c73;
 }
+.nav-box .contentBox{
+	overflow: visible;
+}
 #header-menu{
-	width: 90%;
 	margin: 0 auto;
+	text-align: left;
 }
 #header-menu ul{
 	position: relative;
 }
-#header-menu ul li{
+#header-menu li{
 	display: inline-block;
 	cursor: pointer;
+	position: relative;
 }
-#header-menu ul li a{
+#header-menu li a{
 	color: #ffffff;
 	cursor: pointer;
+	display: block;
+	transition: 1s;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	padding: 1.5em 1em;
+}
+#header-menu li a:hover{
+	color: #ffffff;
+	cursor: pointer;
+	transition: 1s;
+	background-color: #00adef;
 }
 .site-content{
 	width: 100%;
 	display: block;
-	margin: 0;
+	margin: 0 0 5em 0;
 	padding: 2em 0;
 	background-color: #ffffff;
 }
@@ -87,8 +101,6 @@ body{
 	color: #ffffff;
 	margin: 0;
 	padding: 0;
-	position: fixed;
-	bottom: 0;
 	background-color: #033c73;
 }
 .footer .contentBox{

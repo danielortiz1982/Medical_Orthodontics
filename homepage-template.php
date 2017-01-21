@@ -1,10 +1,10 @@
-<?php /* Template Name: Full Width Template */ ?>
+<?php /* Template Name: Homepage Template */ ?>
 <?php get_header(); ?>
 <main class="site-content">
   <div class="contentBox">
 	  	<?php if(have_posts() ) : while(have_posts() ) : the_post(); ?>
 	    <div class="<?php post_class(); ?>">
-	      <h1 class="the-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+	      <h1 class="the-title"><?php the_title(); ?></h1>
 	      <div class="post-thumbnail"><a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url(); ?>" /></a></div>
 	      <div class="the-content"><?php the_content(); ?></div>
 	    </div>

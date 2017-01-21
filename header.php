@@ -27,9 +27,9 @@
                 </div>
 
                 <div class="nav-box">
-                    <nav>
-                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'header-menu' ) ); ?>
-                    </nav>
+                    <div class="contentBox">
+                        <nav><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'header-menu' ) ); ?></nav>
+                    </div>
                 </div>
                 <!--end of .nav-box-->
 

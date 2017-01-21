@@ -11,14 +11,20 @@
 	        $before_after_video_txt    = isset( $values['before_after_video_input'] ) ? esc_attr( $values['before_after_video_input'][0] ) : '';
 	        ?>
 
-	        <div class="meta-wrapper">
-	            <label for="before_after_video_input">Video URL</label><br />
-	            <input type="text" class="input" name="before_after_video_input" id="before_after_video_input" placeholder="<iframe src='https://www.google.com/maps/embed?sampleMap374639' frameborder='0'></iframe>" value="<?php echo $before_after_video_txt; ?>" />
-	        </div>
+	        <div class="row">
+	        	<div class="col-md-6">
+	        		<div class="meta-wrapper">
+			            <label for="before_after_video_input">Video URL</label><br />
+			            <input type="text" class="input" name="before_after_video_input" id="before_after_video_input" placeholder="<iframe src='https://www.google.com/maps/embed?sampleMap374639' frameborder='0'></iframe>" value="<?php echo $before_after_video_txt; ?>" />
+			        </div>
+	        	</div>
 
-	        <div class="meta-wrapper">
-	            <label for="before_after_video_input">Video Demo:</label><br />
-	            <div><?php echo get_post_meta($post->ID, 'before_after_video_input', true); ?></div>
+	        	<div class="col-md-6">
+			        <div class="meta-wrapper">
+			            <label for="before_after_video_input">Video Demo:</label><br />
+			            <div><?php echo get_post_meta($post->ID, 'before_after_video_input', true); ?></div>
+			        </div>
+	        	</div>
 	        </div>
 
 	        <?php 
