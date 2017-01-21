@@ -57,8 +57,12 @@ function Medical_Orthodontics_Scripts(){
 }
 // end of Medical_Orthodontics_Scripts
 
-
 require('inc/custom_post_type.php');
+require('inc/custom_taxonomies.php');
+require('inc/doctor_meta_boxes.php');
+require('inc/before_after_meta_box.php');
+require('inc/video_meta_boxes.php');
+require('inc/testimonial_meta_boxes.php');
 // end of inlcudes
 
 
