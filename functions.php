@@ -50,12 +50,23 @@ function Medical_Orthodontics_Widgets_Init(){
 add_action('wp_enqueue_scripts', 'Medical_Orthodontics_Scripts');
 function Medical_Orthodontics_Scripts(){
 
+	wp_enqueue_style( 'Medical-Orthodontics-reset-css', get_template_directory_uri() . '/css/reset.css' );
+	wp_enqueue_style( 'Medical-Orthodontics-font-awesome-css', get_template_directory_uri() . '/css/font-awesome.min.css' );
+	wp_enqueue_style( 'Medical-Orthodontics-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'Medical-Orthodontics-style', get_stylesheet_uri() );
 	wp_enqueue_script('Medical-Orthodontics-jquery', get_template_directory_uri() . '/js/jquery.min.js');
+	wp_enqueue_script('Medical-Orthodontics-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js');
 	wp_enqueue_script('Medical-Orthodontics-angularjs', get_template_directory_uri() . '/js/angular.min.js');
 	wp_enqueue_script('Medical-Orthodontics-mainjs', get_template_directory_uri() . '/js/main.js');
 }
 // end of Medical_Orthodontics_Scripts
+
+function admin_style() {
+
+wp_enqueue_style( 'Medical-Orthodontics-bootstrap-admin', get_template_directory_uri() . '/css/bootstrap.min.css' );
+  wp_enqueue_style('admin-styles', get_template_directory_uri().'/css/admin.css');
+}
+add_action('admin_enqueue_scripts', 'admin_style');
 
 require('inc/custom_post_type.php');
 require('inc/custom_taxonomies.php');

@@ -11,14 +11,20 @@
 	        $video_meta_txt    = isset( $values['video_meta_input'] ) ? esc_attr( $values['video_meta_input'][0] ) : '';
 	        ?>
 
-	        <div class="meta-wrapper">
-	            <label for="video_meta_input">Video URL</label><br />
-	            <input type="text" class="input" name="video_meta_input" id="video_meta_input" placeholder="<iframe src='https://www.google.com/maps/embed?sampleMap374639' frameborder='0'></iframe>" value="<?php echo $video_meta_txt; ?>" />
-	        </div>
+	        <div class="row">
+	        	<div class="col-md-6">
+	        		<div class="meta-wrapper">
+		            	<label for="video_meta_input">Video URL</label><br />
+		            	<input type="text" class="input" name="video_meta_input" id="video_meta_input" placeholder="<iframe src='https://www.google.com/maps/embed?sampleMap374639' frameborder='0'></iframe>" value="<?php echo $video_meta_txt; ?>" />
+		        	</div>
+	        	</div>
 
-	        <div class="meta-wrapper">
-	            <label for="doc_map_input">Video Demo:</label><br />
-	            <div><?php echo get_post_meta($post->ID, 'video_meta_input', true); ?></div>
+	        	<div class="col-md-6">
+	        		<div class="meta-wrapper">
+		            	<label for="doc_map_input">Video Demo:</label><br />
+		            	<div><?php echo get_post_meta($post->ID, 'video_meta_input', true); ?></div>
+		        	</div>
+	        	</div>
 	        </div>
 
 	        <?php 
@@ -36,7 +42,8 @@
 	            update_post_meta( $post_id, 'video_meta_input', wp_kses( $_POST['video_meta_input'], array(
 	                'iframe' => array(
 	                    'src' => array(),
-	                    'frameborder' => array()
+	                    'frameborder' => array(),
+	                    'allowfullscreen' => array()
 	                    )
 	                ) ) );
 	    }

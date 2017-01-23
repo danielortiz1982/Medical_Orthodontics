@@ -70,7 +70,6 @@ function add_insurance_taxonomy(){
 }
 // end of add_insurance_taxonomy
 
-
 add_action('init','add_associations_taxonomy');
 function add_associations_taxonomy(){
     $taxonomy    = 'associations';
@@ -104,6 +103,40 @@ function add_associations_taxonomy(){
     register_taxonomy($taxonomy, $object_type, $args); 
 }
 // end of add_associations_taxonomy
+
+add_action('init','add_specialties_taxonomy');
+function add_specialties_taxonomy(){
+    $taxonomy    = 'specialties';
+    $object_type = 'doctors';
+    
+    $labels = array(
+        'name'               => 'Specialties',
+        'singular_name'      => 'Specialties',
+        'search_items'       => 'Search Specialties',
+        'all_items'          => 'All Specialties',
+        'parent_item'        => 'Parent Specialties',
+        'parent_item_colon'  => 'Parent Specialties:',
+        'update_item'        => 'Update Specialties',
+        'edit_item'          => 'Edit Specialties',
+        'add_new_item'       => 'Add New Specialties', 
+        'new_item_name'      => 'New Specialties',
+        'menu_name'          => 'Specialties'
+    );
+     
+    $args = array(
+        'labels'            => $labels,
+        'hierarchical'      => true,
+        'show_ui'           => true,
+        'how_in_nav_menus'  => true,
+        'public'            => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array('slug' => 'specialties')
+    );
+
+    register_taxonomy($taxonomy, $object_type, $args); 
+}
+// end of add_specialties_taxonomy
 
 add_action('init','add_cases_taxonomy');
 function add_cases_taxonomy(){
