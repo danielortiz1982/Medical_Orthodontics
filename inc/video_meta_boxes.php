@@ -25,7 +25,6 @@
 		            	<div><?php echo get_post_meta($post->ID, 'video_meta_input', true); ?></div>
 		        	</div>
 	        	</div>
-
 	        </div>
 
 	        <?php 

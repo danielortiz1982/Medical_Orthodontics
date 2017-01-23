@@ -16,7 +16,7 @@
 	        $doc_phone_txt   = isset( $values['doc_phone_input'] ) ? esc_attr( $values['doc_phone_input'][0] ) : '';
 	        $doc_map_txt     = isset( $values['doc_map_input'] ) ? esc_attr( $values['doc_map_input'][0] ) : '';
 	        $doc_email_txt   = isset( $values['doc_email_input'] ) ? esc_attr( $values['doc_email_input'][0] ) : '';
-	        $doc_edu_txt = isset( $values['doc_edu_input'] ) ? esc_attr( $values['doc_edu_input'][0] ) : '';
+	        $doc_edu_txt 	 = isset( $values['doc_edu_input'] ) ? esc_attr( $values['doc_edu_input'][0] ) : '';
 	        ?>
 	        
 	        <div class="row">

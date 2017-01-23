@@ -1,6 +1,7 @@
 	<footer class="footer">
     	<div class="contentBox">
-    		<h5>&copy; <?php echo date('Y'); ?> <?php echo "Medical Orthodontics All Rights Reserved."; ?></h5>
+    		<span class="fa fa-facebook-square"></span> <span class="fa fa-twitter-square"></span> <span class="fa fa-instagram"></span> <span class="fa fa-linkedin-square"></span>
+    		<h5><?php echo "Medical Orthodontics All Rights Reserved."; ?> &copy; <?php echo date('Y'); ?></h5>
     	</div>
     </footer>
     <!--end of .footer-->

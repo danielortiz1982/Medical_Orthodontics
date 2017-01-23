@@ -51,9 +51,11 @@ add_action('wp_enqueue_scripts', 'Medical_Orthodontics_Scripts');
 function Medical_Orthodontics_Scripts(){
 
 	wp_enqueue_style( 'Medical-Orthodontics-reset-css', get_template_directory_uri() . '/css/reset.css' );
+	wp_enqueue_style( 'Medical-Orthodontics-font-awesome-css', get_template_directory_uri() . '/css/font-awesome.min.css' );
 	wp_enqueue_style( 'Medical-Orthodontics-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'Medical-Orthodontics-style', get_stylesheet_uri() );
 	wp_enqueue_script('Medical-Orthodontics-jquery', get_template_directory_uri() . '/js/jquery.min.js');
+	wp_enqueue_script('Medical-Orthodontics-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js');
 	wp_enqueue_script('Medical-Orthodontics-angularjs', get_template_directory_uri() . '/js/angular.min.js');
 	wp_enqueue_script('Medical-Orthodontics-mainjs', get_template_directory_uri() . '/js/main.js');
 }
