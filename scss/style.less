@@ -1,0 +1,290 @@
+
+// Variable Colors
+@black: #000000;
+@white: #ffffff;
+@lightGrey: #cccccc;
+@grey: #72706f;
+@darkGrey: #333333;
+@orange: #f58502;
+
+
+// Variable Sizes 
+@fullWidth: 100%;
+@contentBox: 90%;
+@footerHeight: 5em;
+
+
+// Variable Mix Ins
+.display(@display: block){
+  display: @display;
+}
+.position(@position: relative){
+  position: @position;
+}
+.float(@float: left){
+  float: @float;
+}
+.margin(@margin: 0 auto){
+  margin: @margin;
+}
+.padding(@padding: 0){
+  padding: @padding;
+}
+
+@font-face {
+  font-family: 'GothamBold';
+  src: url('../fonts/GothamBold/GothamBold.otf');
+}
+
+@font-face {
+  font-family: 'GothamBookRegular';
+  src: url('../fonts/GothamBookRegular/GothamBookRegular.otf');
+}
+// end of fonts
+
+
+// Main LESS
+html{
+	height: 100%;
+  	box-sizing: border-box;
+	body{
+		min-height: @fullWidth;
+		font-family: GothamBookRegular;
+		font-size: 100%;
+		background-color: @white;
+		.position();
+		.margin();
+		.padding();
+		h1, h2, h3, h4, h5, h6{
+			text-align: left;
+			font-family: GothamBold;
+			.padding(.5em 0)
+		}
+		strong{
+			color: @orange;
+			font-weight: bold;
+		}
+		a{
+			color: @black;
+			text-decoration: none;
+			transition: 1s;
+			cursor: pointer;
+
+			&:hover{
+				color: @orange;
+				transition: 1s;
+			}
+		}
+		.wrapper{
+			width: @fullWidth;
+			overflow: hidden;
+			.margin();
+			.padding();
+			.display();
+
+			.site-header{
+				width: @fullWidth;
+				background-image: url(../../images/background.png);
+				background-repeat: repeat;
+				.margin();
+				.padding();
+				.display();
+
+				.contentBox{
+					width: @contentBox;
+					.margin();
+					.display();
+					.padding();
+					.header_logo{
+						width: 30%;
+						height: 10em;
+						.margin(0);
+						.padding(1em 0);
+						.display(table);
+
+						.logo{
+							width: @fullWidth;
+							vertical-align: middle;
+							.display(table-cell);
+
+							img{
+								width: 100%;
+								height: auto;
+								.display();
+								.margin();
+								.padding();
+							}
+						}
+					}
+				}
+			}
+			//end of .site-header
+
+			.navigation-box{
+				width: @fullWidth;
+				height: inherit;
+				background-color: @black;
+				.display();
+				.margin(0);
+				.padding(0);
+
+				nav{
+					width: @contentBox;
+					height: 4em;
+					border-left: solid 1px @darkGrey;
+					.margin();
+					.padding();
+					.display();
+					#header-menu{
+						list-style:none;
+						position:relative;
+						float:left;
+						margin:0;
+						padding:0;
+
+						.current-menu-ancestor{
+							background-color: @orange;
+						}
+						.current-menu-item{
+							background-color: @orange;
+						}
+						.current_page_parent{
+							background-color: @orange;
+						}
+
+						a{
+							color: @lightGrey;
+							text-transform: uppercase;
+							text-decoration: none !important;
+							border-right: solid 1px @darkGrey;
+							.display();
+							.padding(1.5em 2em);
+
+							&:hover{
+								color: @darkGrey;
+							}
+							
+						}
+
+						li{
+							position:relative;
+							float:left;
+							margin:0;
+							padding:0;
+							transition: 1s;
+							&:hover{
+								background-color: @orange;
+								transition: 1s;
+							}
+						}
+
+						ul{
+							display:none;
+							position:absolute;
+							top:100%;
+							left:0;
+							background-color: @black;
+							padding:0;
+
+							li{
+								float:none;
+								min-width: 20em;
+							}
+
+							a{
+								padding:1.5em 1em;
+							}
+
+							ul{
+								top:0;
+								left:100%;
+							}
+						}
+
+						li{
+							&:hover > ul{
+								display: block;
+							}
+						}
+					}
+					
+				}
+			}// end of .navigation-box
+
+			.site-content{
+				width: @fullWidth;
+				background-color: @white;
+				.margin(0 0 @footerHeight + 5px 0);
+				.padding();
+				.display();
+
+				.contentBox{
+					width: @contentBox;
+					.padding();
+					.margin();
+					.display();
+
+					.the-title{
+						width: @fullWidth;
+						font-size: 2.8em;
+						text-align: left;
+						font-family: GothamBold;
+						text-decoration: underline;
+						letter-spacing: .04em;
+						.margin();
+						.padding(.5em 0);
+						.display();
+					}
+
+					.the-content{
+						font-size: 1.4em;
+						text-align: left;
+						line-height: 1.3em;
+						p{
+							.padding(.5em 0);
+							.margin();
+							.display();
+						}
+						h1{
+							font-size: 2em;
+						}
+						h2{
+							font-size: 1.8em;
+						}
+						h3{
+							font-size: 1.6em;
+						}
+					}
+				}
+			}
+			//end of .site-content
+
+			.footer{
+				width: @fullWidth;
+				height: @footerHeight;
+				text-align: center;
+				color: @white;
+				background-color: @black;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				border-top: solid 5px @orange;
+				.margin();
+				.padding();
+				.display();
+				.position(absolute);
+				.contentBox{
+					width: @contentBox;
+					p{
+						font-size: .8em;
+						color: @orange;
+						.margin();
+						.padding(2.5em 0 0 0);
+					}
+				}
+			}
+			//end of .footer
+		}
+		// end of wrapper
+	}
+}

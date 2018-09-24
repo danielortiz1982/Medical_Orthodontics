@@ -1,0 +1,23 @@
+{
+  "name": "medical_ortho",
+  "version": "1.3.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "build": "babel --presets es2015 js/ES6 -d js",
+    "style": "scss scss/style.scss scss/css/style.min.css"
+  },
+  "author": "Daniel Ortiz @danielortiz1982",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-preset-es2015": "*",
+    "grunt": "*"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "less": "*",
+    "mongoose": "*"
+  }
+}

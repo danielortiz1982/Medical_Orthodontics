@@ -1,0 +1,257 @@
+
+// Grid column layout sizes
+
+$bv-column-1: 8.33%;
+$bv-column-2:  16.66%;
+$bv-column-3:  25%;
+$bv-column-4:  33.33%;
+$bv-column-5:  41.66%;
+$bv-column-6:  50%;
+$bv-column-7:  58.33%;
+$bv-column-8:  66.66%;
+$bv-column-9:  75%;
+$bv-column-10: 83.33%;
+$bv-column-11: 91.66%;
+$bv-column-12: 100%;
+
+// media queries viewports
+
+$bv-mobile:          400px;
+$bv-tablet:          600px;
+$bv-desktop-small:   1024px;
+$bv-desktop-medium:  1200px;
+$bv-desktop-large:   1440px;
+$bv-desktop-XL:      1920px;
+
+// Container Variation
+
+@mixin bv-grid-row($width: 100%){
+  width: $width;
+  display: block;
+  overflow: hidden !important;
+}
+
+@mixin bv-container-box($width: 90%){
+  width: $width;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+  overflow: hidden !important;
+}
+
+@mixin bv-column-structure(){
+  padding: 0;
+  margin: 0 0;
+  display: block;
+  position: relative;
+}
+
+@mixin bv-float($float: left){
+  float: $float;
+}
+
+// Column Variation
+
+@mixin bv-column-1($width: $bv-column-1){
+  width: $width;
+  @include bv-column-structure();
+}
+
+@mixin bv-column-2($width: $bv-column-2){
+  width: $width;
+  @include bv-column-structure();
+}
+
+@mixin bv-column-3($width: $bv-column-3){
+  width: $width;
+  @include bv-column-structure();
+}
+
+@mixin bv-column-4($width: $bv-column-4){
+  width: $width;
+  @include bv-column-structure();
+}
+
+@mixin bv-column-5($width: $bv-column-5){
+  width: $width;
+  @include bv-column-structure();
+}
+
+@mixin bv-column-6($width: $bv-column-6){
+  width: $width;
+  @include bv-column-structure();
+}
+
+@mixin bv-column-7($width: $bv-column-7){
+  width: $width;
+  @include bv-column-structure();
+}
+
+@mixin bv-column-8($width: $bv-column-8){
+  width: $width;
+  @include bv-column-structure();
+}
+
+@mixin bv-column-9($width: $bv-column-9){
+  width: $width;
+  @include bv-column-structure();
+}
+
+@mixin bv-column-10($width: $bv-column-10){
+  width: $width;
+  @include bv-column-structure();
+}
+
+@mixin bv-column-11($width: $bv-column-11){
+  width: $width;
+  @include bv-column-structure();
+}
+
+@mixin bv-column-12($width: $bv-column-12){
+  width: $width;
+  @include bv-column-structure();
+}
+
+// Start of base stylesheet
+
+body{
+
+  margin: 0;
+  padding: 0;
+
+  // Mobile Styles
+
+  .bv-row{
+    @include bv-grid-row();
+  }
+
+  .bv-container{
+    @include bv-container-box();
+  }
+
+  .bv-1{
+    @include bv-column-1($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  .bv-2{
+    @include bv-column-2($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  .bv-3{
+    @include bv-column-3($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  .bv-4{
+    @include bv-column-4($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  .bv-5{
+    @include bv-column-5($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  .bv-6{
+    @include bv-column-6($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  .bv-7{
+    @include bv-column-7($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  .bv-8{
+    @include bv-column-8($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  .bv-9{
+    @include bv-column-9($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  .bv-10{
+    @include bv-column-10($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  .bv-11{
+    @include bv-column-11($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  .bv-12{
+    @include bv-column-12($width: 100%);
+    @include bv-float($float: none);
+  }
+
+  @media screen and (min-width: $bv-desktop-small){
+
+    .bv-1{
+      @include bv-column-1();
+      @include bv-float($float: left);
+    }
+
+    .bv-2{
+      @include bv-column-2();
+      @include bv-float($float: left);
+    }
+
+    .bv-3{
+      @include bv-column-3();
+      @include bv-float($float: left);
+    }
+
+    .bv-4{
+      @include bv-column-4();
+      @include bv-float($float: left);
+    }
+
+    .bv-5{
+      @include bv-column-5();
+      @include bv-float($float: left);
+    }
+
+    .bv-6{
+      @include bv-column-6();
+      @include bv-float($float: left);
+    }
+
+    .bv-7{
+      @include bv-column-7();
+      @include bv-float($float: left);
+    }
+
+    .bv-8{
+      @include bv-column-8();
+      @include bv-float($float: left);
+    }
+
+    .bv-9{
+      @include bv-column-9();
+      @include bv-float($float: left);
+    }
+
+    .bv-10{
+      @include bv-column-10();
+      @include bv-float($float: left);
+    }
+
+    .bv-11{
+      @include bv-column-11();
+      @include bv-float($float: left);
+    }
+
+    .bv-12{
+      @include bv-column-12();
+      @include bv-float($float: left);
+    }
+
+  }
+  // end of @media screen 1024px
+
+}

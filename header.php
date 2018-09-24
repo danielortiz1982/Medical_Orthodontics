@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
         <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
         <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -10,38 +11,37 @@
     </head>
 
     <body <?php body_class(); ?>>
-    	<div class="wrapper">
+
+        <div class="wrapper">
             <header class="header">
-                <div class="contentBox header-content">
-                    <div class="row">
-                        <div id="headerLeft" class="col-md-6">
-                            <div class="header-logo"><a href="/noor/MedicalOrthodontics"><img src="<?php echo get_template_directory_uri() . '/images/logo.svg' ?>" /></a></div>
+                <section class="bv-row">
+                    <div class="bv-container">
+                        <div class="bv-6">
+                            <figure class="header_logo">
+                                <div class="toggle-button">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                                <div class="logo">
+                                    <a href="/">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png">
+                                    </a>
+                                </div>
+                            </figure>
                         </div>
-                        <!--#headerLeft-->
 
-                        <div id="headerRight" class="col-md-6">
-                            <div class="header-social"><a href=""><span class="fa fa-facebook-square"></span></a> <a href=""><span class="fa fa-twitter-square"></span></a> <a href=""><span class="fa fa-instagram"></span></a> <a href=""><span class="fa fa-linkedin-square"></span></a> <a href=""><span class="fa fa-envelope"></span></a></div>
-                            <!-- <div>
-                                <form role="search" method="get" class="search-form" action="http://localhost:8888/noor/MedicalOrthodontics/">
-                                    <label>
-                                        <span class="screen-reader-text">Search for:</span>
-                                        <input type="search" class="search-field" placeholder="Search …" value="" name="s">
-                                    </label>
-                                    <input type="submit" class="search-submit" value="Search">
-                                </form>
-                            </div> -->
+                        <div class="bv-6">
+                            <div class="header-social">
+                                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                <a target="_blank" href="https://twitter.com/MedicalOrthodo1"><i class="fab fa-twitter-square"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/medicalorthodontics/"><i class="fab fa-instagram"></i></a>
+								<a target="_blank" href="https://plus.google.com/u/0/103822529754449125092"><i class="fab fa-google-plus-square"></i></a>
+                            </div>
+                             <div class="find-doctor">
+                                <input type="text" placeholder="10016"><a href="/find-a-doctor/">find a doctor</a>
+                            </div>
                         </div>
-                        <!--#headerRight-->
                     </div>
-                </div>
-
-                <div class="nav-box">
-                    <div class="contentBox">
-                        <nav><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'header-menu' ) ); ?></nav>
-                    </div>
-                </div>
-                <!--end of .nav-box-->
-
+                </section>
+                <div class="navigation-box" data-menu="closed"><nav><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'header-menu' ) ); ?></nav></div>
             </header>
-            <!--end of .header-->
-    	
