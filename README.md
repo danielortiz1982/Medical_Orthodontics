@@ -1,4 +1,3 @@
-# BrandingVerticals Wordpress Boilerplate.
-
+# Medical Othodontics 
 
 
